@@ -18,6 +18,6 @@ __pycache__/
 
 # 数据文件
 data/
-*.csv
+# *.csv
 *.json
 *.xlsx
