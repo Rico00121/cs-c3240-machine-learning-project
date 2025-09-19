@@ -1,6 +1,6 @@
-# Machine Learning Project
+# S&P500 Prediction with Machine Learning
 
-This is a project repository for Aalto University Machine Learning course CS-CS-C3240.
+This project is one part of the course CS-C3240 Machine Learning D at Aalto University.
 
 ## Requirements
 
@@ -52,20 +52,37 @@ jupyter notebook
 
 ```
 machine-learning/
-├── pyproject.toml      # Project configuration and dependencies
-├── uv.lock            # Locked dependency versions (ensures consistency)
-├── README.md           # Project documentation
-├── .gitignore         # Git ignore file
-├── main.py            # Main program file
-└── .venv/             # Virtual environment (not committed to Git)
+├── pyproject.toml              # Project configuration and dependencies
+├── uv.lock                     # Locked dependency versions (ensures consistency)
+├── README.md                   # Project documentation
+├── .gitignore                  # Git ignore file
+├── 01_download_data.py         # Step 1: Data download script
+├── 02_pre_processing.ipynb     # Step 2: Data preprocessing
+├── 03_data_exploration.ipynb   # Step 3: Exploratory data analysis
+├── 04_model_training.ipynb                  # Step 4: Model training and evaluation
+├── data/                       # Downloaded datasets
+└── .venv/                      # Virtual environment (not committed to Git)
 ```
+
+## Collaborative Development Workflow
+
+This project is developed collaboratively by two team members. To facilitate synchronous development and avoid merge conflicts, we have structured the workflow into numbered sequential notebooks:
+
+### Execution Order
+**⚠️ IMPORTANT: Execute files in the following order for proper reproduction:**
+
+1. **01_download_data.py** - Download and organize the dataset
+2. **02_pre_processing.ipynb** - Clean and preprocess the data
+3. **03_data_exploration.ipynb** - Exploratory data analysis and visualization
+4. **04_model_training.ipynb** - Model training, evaluation, and predictions
 
 ## Usage
 
-1. Conduct all machine learning experiments in Jupyter Notebook
-2. Place data files in the `data/` directory
-3. To add new dependencies: `uv add package_name`
-4. After updating dependencies, commit both `pyproject.toml` and `uv.lock` files
+1. **Follow the numbered execution order** (01 → 02 → 03 → 04)
+2. Each notebook saves intermediate results for the next step
+3. Place data files in the `data/` directory
+4. To add new dependencies: `uv add package_name`
+5. After updating dependencies, commit both `pyproject.toml` and `uv.lock` files
 
 ## Collaboration Guidelines
 
